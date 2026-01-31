@@ -1,0 +1,73 @@
+### Endpoints de Autenticación
+
+# Register
+POST https://localhost:7XXX/api/auth/register
+Content-Type: application/json
+
+{
+  "usuario": "testuser",
+  "contrasena": "test123"
+}
+
+###
+
+# Login
+POST https://localhost:7XXX/api/auth/login
+Content-Type: application/json
+
+{
+  "usuario": "admin",
+  "contrasena": "admin123"
+}
+
+###
+
+# Logout
+POST https://localhost:7XXX/api/auth/logout
+Authorization: Bearer TU_TOKEN_AQUI
+
+###
+
+### Endpoints de Tareas
+
+# Get all tareas
+GET https://localhost:7XXX/api/tareas
+Authorization: Bearer TU_TOKEN_AQUI
+
+###
+
+# Get tarea by ID
+GET https://localhost:7XXX/api/tareas/1
+Authorization: Bearer TU_TOKEN_AQUI
+
+###
+
+# Create tarea
+POST https://localhost:7XXX/api/tareas
+Content-Type: application/json
+Authorization: Bearer TU_TOKEN_AQUI
+
+{
+  "titulo": "Nueva tarea desde HTTP Client",
+  "descripcion": "Esta es una tarea de prueba",
+  "completada": false
+}
+
+###
+
+# Update tarea
+PUT https://localhost:7XXX/api/tareas/1
+Content-Type: application/json
+Authorization: Bearer TU_TOKEN_AQUI
+
+{
+  "titulo": "Tarea actualizada",
+  "descripcion": "Descripción actualizada",
+  "completada": true
+}
+
+###
+
+# Delete tarea
+DELETE https://localhost:7XXX/api/tareas/1
+Authorization: Bearer TU_TOKEN_AQUI
