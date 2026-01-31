@@ -101,7 +101,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Comentado para desarrollo - permite HTTP sin redirigir a HTTPS
+// app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
 
